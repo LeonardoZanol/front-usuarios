@@ -1,7 +1,13 @@
+import { Container } from "@mui/material"
+import Title from "../components/Title"
+
 function Usuarios() {
 
     return (
-        <h1>Usuarios</h1>
+        <Container sx={{ display: "flex", justifyContent: "center" }}>
+            <Title text="Usuários" />
+
+        </Container>
     )
 
 }
