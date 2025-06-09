@@ -1,5 +1,6 @@
 import { Container } from "@mui/material"
 import Title from "../components/Title"
+import ListUsers from "../components/ListUsers"
 
 function Usuarios() {
 
