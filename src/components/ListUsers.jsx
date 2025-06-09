@@ -1,6 +1,13 @@
 import { colors, Paper, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
 function ListUsers({ users }) {
+
+    const navigate = useNavigate()
+
+    function changeRoute(user) {
+        navigate(`/dados/${user.id}`)
+    }
 
     return (
 
@@ -15,7 +22,7 @@ function ListUsers({ users }) {
                 </TableHead>
                 <TableBody>
                     {users.map((user) => (
-                    <TableRow>
+                    <TableRow key={user.id} hover sx={{ cursor: "pointer" }} onClick={() => {() => {changeRoute(user)}}}>
                         <TableCell>{user.id}</TableCell>
                         <TableCell>{user.nome}</TableCell>
                         <TableCell>{user.email}</TableCell>
