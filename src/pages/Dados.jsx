@@ -2,6 +2,7 @@ import { Container } from "@mui/material"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Title from "../components/layout/Title"
+import Content from "../components/layout/Content"
 
 function Dados() {
     const { id } = useParams()
@@ -26,10 +27,12 @@ function Dados() {
     }, [id])
 
     return (
-        <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <Content>
             <Title text="Dados Usuário" />
 
-        </Container>
+
+
+        </Content>
     )
 
 }

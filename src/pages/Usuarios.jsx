@@ -3,6 +3,7 @@ import { Container } from "@mui/material"
 import { useEffect, useState } from "react"
 import Title from "../components/layout/Title"
 import ListUsers from "../components/user/ListUsers"
+import Content from "../components/layout/Content"
 
 function Usuarios() {
 
@@ -27,12 +28,12 @@ function Usuarios() {
     }, [])
 
     return (
-        <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <Content>
             <Title text="Lista de Usuários" />
 
             <ListUsers users={users} />
 
-        </Container>
+        </Content>
     )
 
 }
