@@ -31,7 +31,11 @@ function Usuarios() {
         <Content>
             <Title text="Lista de Usuários" />
 
-            <ListUsers users={users} />
+            {users.length != 0 ? (
+                <ListUsers users={users} />
+            ) : (
+                <Title text="Usuários Não Encontrados!" />
+            )}
 
         </Content>
     )
