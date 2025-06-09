@@ -1,12 +1,15 @@
-import { Container } from "@mui/material"
+import { Button, Container } from "@mui/material"
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Title from "../components/layout/Title"
 import Content from "../components/layout/Content"
+import UserCard from "../components/user/UserCard"
 
 function Dados() {
     const { id } = useParams()
     const [user, setUser] = useState(null)
+
+    const navigation = useNavigate()
 
     useEffect(() => {
 
@@ -30,7 +33,13 @@ function Dados() {
         <Content>
             <Title text="Dados Usuário" />
 
+            {user ? (
+                <UserCard user={user} />
+            ) : (
+                <Title text="Usuário Não Econtrado!" />
+            )}
 
+            <Button variant="contained" color="primary" onClick={() => navigation('/usuarios')}>Retornar</Button>
 
         </Content>
     )
