@@ -33,7 +33,7 @@ function Dados() {
         <Content>
             <Title text="Dados Usuário" />
 
-            {user ? (
+            {user && !user.erro ? (
                 <UserCard user={user} />
             ) : (
                 <Title text="Usuário Não Econtrado!" />
