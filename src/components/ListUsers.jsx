@@ -22,7 +22,7 @@ function ListUsers({ users }) {
                 </TableHead>
                 <TableBody>
                     {users.map((user) => (
-                    <TableRow key={user.id} hover sx={{ cursor: "pointer" }} onClick={() => {() => {changeRoute(user)}}}>
+                    <TableRow key={user.id} hover sx={{ cursor: "pointer" }} onClick={() => changeRoute(user)}>
                         <TableCell>{user.id}</TableCell>
                         <TableCell>{user.nome}</TableCell>
                         <TableCell>{user.email}</TableCell>
