@@ -1,7 +1,7 @@
 import { Container } from "@mui/material"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import Title from "../components/Title"
+import Title from "../components/layout/Title"
 
 function Dados() {
     const { id } = useParams()
@@ -28,7 +28,7 @@ function Dados() {
     return (
         <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
             <Title text="Dados Usuário" />
-            
+
         </Container>
     )
 
