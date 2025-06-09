@@ -27,7 +27,7 @@ function Usuarios() {
 
     return (
         <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-            <Title text="Usuários" />
+            <Title text="Lista de Usuários" />
 
             <ListUsers users={users} />
 
