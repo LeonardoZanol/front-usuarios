@@ -1,5 +1,3 @@
-import { Container } from "@mui/material"
-
 import { useEffect, useState } from "react"
 import Title from "../components/layout/Title"
 import ListUsers from "../components/user/ListUsers"
